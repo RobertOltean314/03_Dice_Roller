@@ -1,3 +1,10 @@
-﻿DiceRollApp app = new DiceRollApp();
+﻿using _03_Dice_Roller.Game;
 
-app.Run();
+var random = new Random();
+var dice = new Dice(random);
+var guessingGame = new GuessingGame(dice);
+
+var gameResult = guessingGame.Play();
+GuessingGame.PrintResult(gameResult);
+
+Console.ReadKey();
